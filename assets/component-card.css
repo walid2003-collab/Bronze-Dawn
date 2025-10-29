@@ -289,6 +289,23 @@
   margin: 1.3rem;
 }
 
+/* Promotional badge styling for B1G1, B2G1, B3G1 collections */
+.badge--promo {
+  background-color: #FF0000 !important;
+  color: #FFFFFF !important;
+  border-radius: 5px !important;
+  border: none !important;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.card__badge--promo {
+  z-index: 2;
+}
+
 .card__media .media img {
   height: 100%;
   object-fit: cover;
