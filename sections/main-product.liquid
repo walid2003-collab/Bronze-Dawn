@@ -92,6 +92,28 @@
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
+                {%- liquid
+                  assign promo_badge_text = ''
+                  for collection in product.collections
+                    if collection.handle == 'b1g1' or collection.title == 'B1G1'
+                      assign promo_badge_text = 'Buy 1 Get 1'
+                      break
+                    elsif collection.handle == 'b2g1' or collection.title == 'B2G1'
+                      assign promo_badge_text = 'Buy 2 Get 1'
+                      break
+                    elsif collection.handle == 'b3g1' or collection.title == 'B3G1'
+                      assign promo_badge_text = 'Buy 3 Get 1'
+                      break
+                    endif
+                  endfor
+                -%}
+                {%- if promo_badge_text != '' -%}
+                  <div class="product__promo-badge">
+                    <span class="badge badge--promo">
+                      {{ promo_badge_text }}
+                    </span>
+                  </div>
+                {%- endif -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
                   <a href="{{ product.url }}" class="product__title">

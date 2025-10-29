@@ -6,6 +6,16 @@
   gap: 0;
 }
 
+/* Promotional badge for product page */
+.product__promo-badge {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.product__promo-badge .badge--promo {
+  display: inline-block;
+}
+
 .product--no-media {
   max-width: 57rem;
   margin: 0 auto;
